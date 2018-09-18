@@ -60,7 +60,6 @@ const styles = theme => ({
 const mapStateToProps = (state, ownProps) => {  
   return {
     user: state.users['wulf@semada.io'],
-    auth: state.auth.auth,
     access_token: state.auth.access_token,
     id_token: state.auth.id_token,
     expires_at: state.auth.expires_at,
