@@ -14,6 +14,7 @@ import NewProposalContainer from './containers/new-proposal'
 import NewDaoContainer from './containers/new-dao'
 import ProposalSwimLanesContainer from './containers/proposal-swim-lanes'
 import DaosContainer from './containers/daos'
+import Error404Container from './containers/404'
 import registerServiceWorker from './registerServiceWorker'
 import store from './store'
 import { Provider } from 'react-redux'
@@ -34,7 +35,8 @@ ReactDOM.render(
         <Route path="/daos" component={DaosContainer} />
         <Route path="/users/:email" component={UserContainer} />
         <Route path="/callback" component={CallbackContainer}/>
-        <Route path="/" component={ProposalSwimLanesContainer} />
+        <Route path="/" exact component={ProposalSwimLanesContainer} />
+        <Route component={Error404Container} />
       </Switch>
     </Router>
   </Provider>, 
